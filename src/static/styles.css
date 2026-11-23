@@ -60,9 +60,17 @@ section h3 {
 .activity-card {
   margin-bottom: 15px;
   padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  border: 1px solid #e0e4f0;
+  border-left: 4px solid #3949ab;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(26, 35, 126, 0.08);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.activity-card:hover {
+  box-shadow: 0 5px 14px rgba(26, 35, 126, 0.14);
+  transform: translateY(-2px);
 }
 
 .activity-card h4 {
@@ -72,6 +80,88 @@ section h3 {
 
 .activity-card p {
   margin-bottom: 8px;
+}
+
+.participants-section {
+  margin-top: 16px;
+  padding: 12px 14px;
+  border: 1px solid #e4e8f5;
+  border-radius: 6px;
+  background-color: #f5f7ff;
+}
+
+.participants-section h5 {
+  margin-bottom: 8px;
+  color: #1a237e;
+  font-size: 0.95rem;
+}
+
+.participants-section ul {
+  padding: 0;
+  list-style: none;
+  color: #424b68;
+}
+
+.participants-section li {
+  min-width: 0;
+}
+
+.participant-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 4px 0;
+}
+
+.participant-row span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.delete-participant-button {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 6px;
+  border: 1px solid #f1c5c5;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #b42318;
+}
+
+.delete-participant-button:hover {
+  background-color: #fff0f0;
+}
+
+.delete-participant-button:focus-visible {
+  outline: 3px solid rgba(57, 73, 171, 0.35);
+  outline-offset: 2px;
+}
+
+.delete-participant-button:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+.delete-participant-button svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.participants-section .no-participants {
+  margin: 0;
+  color: #68718a;
+  font-size: 0.9rem;
+  font-style: italic;
 }
 
 .form-group {
